@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+
+
+@media screen and (min-width:768px) {
+    body{
+        display: flex;
+        flex-direction: row;
+        overflow-x:hidden;
+    
+    }
+    
+    .navbar{
+        width: 11%;
+        background-color: #000;
+    }
+    main{
+        background-color: #1d1d1d;
+        z-index: -2;
+    }
+    .content{
+        width: 89%;
+        /* background-color: blue; */
+    }
+    .hero{
+        height: 100vh;
+        position: relative;
+        z-index: -2;
+        /* background-color: #1d1d1d; */
+
+    }
+    
+    .hero__canvas{
+        position: absolute;
+        z-index: -1;
+    }  
+    .hero__content{
+        color: aqua;
+        z-index: 1;
+        font-size: 3rem;
+    }
+}
