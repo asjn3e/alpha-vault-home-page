@@ -18,26 +18,23 @@ body{
         display: flex;
         flex-direction: row;
         overflow-x:hidden;
-    
+        
     }
     
     .navbar{
         width: 11%;
-        background-color: #000;
+        background-color: #181818;
     }
-    main{
-        background-color: #1d1d1d;
-        z-index: -2;
-    }
+    
     .content{
         width: 89%;
-        /* background-color: blue; */
+        background-color: #1d1d1d;
     }
     .hero{
         height: 100vh;
         position: relative;
-        z-index: -2;
-        /* background-color: #1d1d1d; */
+        z-index: 0;
+        
 
     }
     
@@ -47,7 +44,7 @@ body{
     }  
     .hero__content{
         color: aqua;
-        z-index: 1;
         font-size: 3rem;
+        /* pointer-events: none; */
     }
 }

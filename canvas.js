@@ -68,18 +68,107 @@ canvas.width=document.querySelector(".hero").scrollWidth;
 
 let candles=[];
 
+const mouse={
+    latest_x:undefined,
+    latest_y:undefined,
+    x:undefined,
+    y:undefined
+}
 class candlesBase{
-    constructor(){
-        this.x=undefined;
-        this.y=undefined;
-        this.width=undefined;
-        this.height=undefined;
-        this.color=undefined;
+    constructor(x,width){
+        this.x=x;
+        this.y=canvas.height;
+        this.width=width;
+        this.height=0;
+        this.color="#5ae2dc";
     }   
-    update(){
-            
+    update(newColor){
+        const normalHeight=((canvas.height - mouse.y) * - 1  ) + (canvas.height / 3);
+        
+        if(normalHeight < -(canvas.height / 2.7)  ){
+        this.height=-(canvas.height / 2.7)
+        }else{
+            this.height=normalHeight;
+
+        }
+        this.color=newColor;
     }
     draw(){
-        ctx.fillRect(this.x,this.y,this.width,this.height)
+        ctx.fillStyle=this.color;
+        ctx.fillRect(this.x,this.y,this.width,this.height);
     }
 }
+
+const candlesWidth=canvas.width / 60;
+function init(){
+    for (let index = 0; index < 60; index++) {
+        candles.push(new candlesBase(index * candlesWidth,candlesWidth - candlesWidth / 2.3));
+    }
+}
+init();
+
+function updateCandles(){
+    candles.forEach((element,index)=>{
+        if(element.x < mouse.x && element.x + candlesWidth > mouse.x){
+            if (mouse.x > mouse.latest_x && mouse.x > mouse.latest_x + candlesWidth){
+                // console.log(mouse)
+                if(mouse.y > mouse.latest_y){
+                    // console.log("hi2")
+                    element.update("#f02d83");
+                    element.draw();
+                }else{
+                    element.update("#5ae2dc");
+                    element.draw();
+                }
+
+                mouse.latest_y=element.height + (canvas.height / 3) * 2 
+
+            }else if(mouse.x < mouse.latest_x && mouse.x < mouse.latest_x + candlesWidth){
+                if(mouse.y > mouse.latest_y){
+                    // console.log("hi2")
+                    element.update("#f02d83");
+                    element.draw();
+                }else{
+                    element.update("#5ae2dc");
+                    element.draw();
+                }
+                mouse.latest_y=element.height + (canvas.height / 3) * 2
+                
+            }else{
+
+                if(mouse.y > mouse.latest_y){
+                        
+                    element.update("#f02d83");
+                    element.draw();
+                }else{
+                    
+                    element.update("#5ae2dc");
+                    element.draw();
+                }  
+            }
+            
+            mouse.latest_x=element.x;
+
+        }
+        else{
+            element.draw();
+        }
+    })
+}
+
+document.addEventListener("mousemove",(e)=>{
+    mouse.y=e.y;
+    mouse.x=e.x - document.querySelector(".navbar").scrollWidth;
+    // console.log(mouse)
+})
+
+
+function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    updateCandles();
+
+    requestAnimationFrame(animate);
+}
+animate()
+
+
