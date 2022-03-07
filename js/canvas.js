@@ -8,7 +8,7 @@ const ctx=canvas.getContext("2d");
 
 canvas.height=document.querySelector(".hero").clientHeight;
 canvas.width=document.querySelector(".hero").clientWidth;
-
+console.log(document.querySelector(".hero").clientHeight)
 let candles=[];
 
 const mouse={
@@ -20,7 +20,7 @@ class candlesBase{
         this.x=x;
         this.y=canvas.height;
         this.width=width;
-        this.height=Math.random() * -100;
+        this.height=Math.random() * -130;
         this.lineHeight=(Math.random() * - 20 * Math.random()) + canvas.height + this.height
         this.color="#5ae2dc";
         this.modificationNumber=undefined;
@@ -53,8 +53,9 @@ let modificationCounter=0;
 function updateCandles(){
     candles.forEach((element,index)=>{
         if(element.x < mouse.x && element.x + candlesWidth > mouse.x && index != 0){
+
             if(element.modificationNumber!=modificationCounter){
-                element.height=Math.random() * -100;
+                element.height=Math.random() * -130;
                 element.lineHeight=(Math.random() * - 50 * Math.random()) + canvas.height + element.height
                 
                 if(element.height > candles[index -1].height){
@@ -88,8 +89,7 @@ function updateCandles(){
 
 document.addEventListener("mousemove",(e)=>{
     mouse.y=e.y;
-    mouse.x=e.x - document.querySelector(".navbar").scrollWidth;
-    // console.log(mouse)
+    mouse.x=e.x;
 })
 
 

@@ -4,38 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/normalize.css">
     <title>Alpha Vault</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 </head>
 <body>
+<div style="height: 100vh;" class="hero_nav">
     <nav class="navbar collapsible">
        <div class="navbar__logo">
-           <img src="./img/logo-dark (5).webp" class="navbar__img" alt="alpha vault">
+            <a href="#">
+            <img src="./img/logo-dark (5).webp" class="navbar__img" alt="alpha vault">
+            </a>
            <!-- <p class="navbar__logoType">Alpha Vault</p> -->
             <img src="./img/menu.png" class="navbar__toggler" alt="">
        </div>   
 
        <div class="navbar__links collapsible__content">
            <ul class="navbar__list">
-               <li class="navbar__item">About Us</li>
-               <li class="navbar__item">How it Works</li>
-               <li class="navbar__item"><span>Login</span></li>
+               <li class="navbar__item"><a href="#">About Us</a></li>
+               <li class="navbar__item"><a href="#" >How it Works</a></li>
+               <li class="navbar__item"><a href="#">Blog</a></li>
+               <li class="navbar__item"><a href="#"><span class="btn">Login | SingUp</span></a></li>
            </ul>
        </div>
     </nav>
-    <main class="content">
-        <div class="hero">
-            <canvas class="hero__canvas" id="canvas"></canvas>
-
-            <div class="hero__content">
-                <p>hello</p>
+    
+    <section class="hero">
+        <div class="hreo__container grid grid--1x2">
+            <div class="hero__header">
+                <h1>Investment Made Easy</h1>
+                <p>invest in less than bela bela bela</p>
+                <button class="btn btn--secondary">Inest Now</button>
             </div>
         </div>
-    </main>
+        <canvas class="hero__canvas" id="canvas"></canvas>
+    </section>
+</div>
     <script src="js/canvas.js"></script>
     <script src="js/index.js"></script>
 
