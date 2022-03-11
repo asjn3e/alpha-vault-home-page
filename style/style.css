@@ -33,7 +33,7 @@ body {
     color: var(--color-body);
     font-size: 2.4rem;
     line-height: 1.5;
-    overflow-x:hidden ;
+    overflow-x:hidden !important;
     font-weight: 500;
 }
 
@@ -144,7 +144,8 @@ body{
 .container{
     width: 100vw;
     height: 100vh;
-    padding: 2rem 3rem;
+    padding: 2rem 3rem 0 3rem;
+    overflow: hidden;
 }
 
 @media screen and (min-width:768px){
@@ -218,9 +219,10 @@ body{
     align-items: center;
 }
 .navbar__item a img{
-    width: 10%;
+    width: 8%;
 }
 .navbar__item a p{
+    font-size: 1.6rem;
     margin-left:2rem;
 }
 
@@ -319,9 +321,44 @@ body{
 
 
 
-img{
-    width: 10%;
+.hero{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+   
+}
+.hero__content{
+    padding-top: 5rem;
+
+}
+.hero__title{
+    font-size: 4rem;
+    text-align: center;
+}
+.timer{
+    margin-top:5rem ;
+    padding: 2rem 0;
+    border: 2px solid var(--color-body);
+    border-radius:10px/20px ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
 }
 
+.hero__image{
+    
+}
 
- 
+.hero__image .desktop{
+    display: none;
+ }
+.hero__image .android{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    
+}
+
+  
