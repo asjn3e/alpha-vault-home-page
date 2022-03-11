@@ -316,7 +316,19 @@ body{
         margin-left: 01rem;
     }
     
+}
+@media screen and (min-width:1366px){
+    .navbar__item a img{
+        width: 15%;
+        margin-left: 0rem;
     }
+}
+@media screen and (min-width:1920px){
+    .navbar__item a img{
+        width: 13%;
+        margin-left: 0rem;
+    }
+}
 
 
 
@@ -603,4 +615,10 @@ body{
         display: none;
         
     }
+}
+canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
