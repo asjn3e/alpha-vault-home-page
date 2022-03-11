@@ -1,8 +1,131 @@
-*{
+:root {
+    --color-primary: #5ae2dc;
+    --color-secondary: #f02d83;
+    --color-acente: #854ca1;
+    --color-headings: #1b0760;
+    --color-body: #918ca4;
+    --color-body-darker:#5c5577;
+    --border: #222;
+    --border-radius: 30px;
+
+}
+
+*,
+*::after,
+*::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+
+
+/* Typog raphy */
+
+html {
+    font-size: 62.5%;
+
+}
+
+body {
+  
+    font-family: 'Inter', sans-serif;
+    color: var(--color-body);
+    font-size: 2.4rem;
+    line-height: 1.5;
+    overflow-x:hidden ;
+}
+
+input,
+textarea,
+button {
+    font-family: inherit
+}
+
+h1,
+h2,
+h3 {
+    color: var(--color-headings);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+p {
+    margin-top: 0;
+}
+a{
+    text-decoration: none;
+    
+}
+
+.btn{
+    border-radius: var(--border-radius);
+    border:none;
+    padding: 1rem 2rem;
+    color: #fff;
+    border: none;
+}
+.btn--primary{
+    background-color: var(--color-primary);
+    /* color: #000;     */
+}
+.btn--secondary{
+    background-color: var(--color-secondary); 
+}
+.btn--acente{
+    background-color: var(--color-acente);
+}
+@media screen and (min-width:768px) {
+    body {
+        font-size: 1.8rem;
+        line-height: 1.5;
+    }
+
+    h1 {
+        font-size: 8rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    body {
+        font-size: 1.8rem;
+        line-height: 1.5;
+    }
+
+    h1 {
+        font-size: 8rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+    }
+}
+
+
 h1{
     font-family: "Montserrat";
     font-size: 5rem;
@@ -16,16 +139,26 @@ body{
     width: 100vw;
     
 }
-.navbar{
-    display: flex;
-}
+
 .container{
     width: 100vw;
     height: 100vh;
-    
+    padding: 2rem 3rem;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+
+}
+.navbar__logo{
+    display: flex;
+
+}
+
+.navbar__button{
+
 }
   
-img{
-    width: 10%;
-}
+
  
