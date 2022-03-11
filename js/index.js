@@ -1,5 +1,5 @@
-document.querySelectorAll(".collapsible").forEach(element =>{
+document.querySelectorAll(".navbar__toggler").forEach(element =>{
     element.addEventListener("click",()=>{
-        element.classList.toggle("collapsible--expanded")
+        document.querySelector(".collapsible").classList.toggle("collapsible--expanded")
     })
 })
