@@ -5,7 +5,7 @@ document.querySelectorAll(".navbar__toggler").forEach(element =>{
 })
 
 
-const countDownDate=new Date("Jan 5,2024 15:37:25").getTime();
+const countDownDate=new Date("mar 19,2022 00:00:00").getTime();
 console.log(countDownDate)
 
 const x = setInterval(function() {
@@ -23,7 +23,7 @@ const x = setInterval(function() {
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
   
     // Display the result in the element with id="demo"
-    const spans=document.querySelectorAll("span");
+    const spans=document.querySelectorAll(".timerP");
     spans[0].innerText=days;
     spans[1].innerText=hours;
     spans[2].innerText=minutes;

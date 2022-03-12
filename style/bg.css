@@ -1,4 +1,4 @@
-.g
+ .g
 {
 	background : -moz-radial-gradient(86.84% 101.78%, circle farthest-corner, rgba(44, 64, 154, 1) 0%, rgba(36, 53, 130, 1) 11.36%, rgba(26, 38, 98, 1) 29.4%, rgba(19, 28, 75, 1) 46.87%, rgba(15, 21, 62, 1) 63.34%, rgba(13, 19, 57, 1) 77.78%, rgba(14, 15, 27, 1) 100%);
 	background : -webkit-radial-gradient(86.84% 101.78%, circle farthest-corner, rgba(44, 64, 154, 1) 0%, rgba(36, 53, 130, 1) 11.36%, rgba(26, 38, 98, 1) 29.4%, rgba(19, 28, 75, 1) 46.87%, rgba(15, 21, 62, 1) 63.34%, rgba(13, 19, 57, 1) 77.78%, rgba(14, 15, 27, 1) 100%);
@@ -33,7 +33,7 @@
 	}
 }
 
-/* ipad tablet */
+
 
 @media screen and (min-width:768px){
 	.g{

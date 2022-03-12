@@ -30,10 +30,10 @@ html {
 body {
   
     font-family: 'Montserrat', sans-serif;
-    color: var(--color-body);
+    color: #fff;
     font-size: 2.4rem;
     line-height: 1.5;
-    overflow-x:hidden !important;
+    overflow:hidden !important;
     font-weight: 500;
 }
 
@@ -46,7 +46,7 @@ button {
 h1,
 h2,
 h3 {
-    color: var(--color-headings);
+    color: #fff;
     margin-bottom: 1rem;
     line-height: 1.1;
 }
@@ -71,23 +71,6 @@ a{
     
 }
 
-.btn{
-    border-radius: var(--border-radius);
-    border:none;
-    padding: 1rem 2rem;
-    color: #fff;
-    border: none;
-}
-.btn--primary{
-    background-color: var(--color-primary);
-    /* color: #000;     */
-}
-.btn--secondary{
-    background-color: var(--color-secondary); 
-}
-.btn--acente{
-    background-color: var(--color-acente);
-}
 @media screen and (min-width:768px) {
     body {
         font-size: 1.8rem;
@@ -144,7 +127,7 @@ body{
     width: 100vw;
     height: 100vh;
     padding: 2rem 3rem 0 3rem;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 @media screen and (min-width:768px){
@@ -152,6 +135,7 @@ body{
         width: 100vw;
         height: 100vh;
         padding: 4rem 4rem;
+        overflow: hidden;
     }   
 }
 
@@ -181,6 +165,7 @@ body{
 .navbar__toggler{
     width: 10%;
     transition: transform .3s ease-in-out;
+    z-index: 2;
 }
 .navbar__content{
     list-style: none;
@@ -208,6 +193,7 @@ body{
 .navbar__item{
     padding: 1rem;
     border-bottom:1px solid var(--color-body);
+    z-index: 2;
 }
 .navbar__item:last-child{
     border: none;   
@@ -216,13 +202,16 @@ body{
     color: #fff;
     display: flex;
     align-items: center;
+    z-index: 2;
 }
 .navbar__item a img{
     width: 8%;
+    z-index: 2;
 }
 .navbar__item a p{
     font-size: 1.6rem;
     margin-left:2rem;
+    z-index: 2;
 }
 
 @media screen and (min-width:768px){
@@ -319,8 +308,8 @@ body{
 }
 @media screen and (min-width:1366px){
     .navbar__item a img{
-        width: 15%;
-        margin-left: 0rem;
+        width: 20%;
+        margin-left: 3rem;
     }
     .navbar__image{
         width:30%;
@@ -330,7 +319,7 @@ body{
 }
 @media screen and (min-width:1920px){
     .navbar__item a img{
-        width: 13%;
+        width: 17%;
         margin-left: 0rem;
     }
     /* .navbar__image{
@@ -348,32 +337,61 @@ body{
     grid-template-rows: 1fr 1fr;
     height: 100%;
     z-index: 2;
-   
+    
 }
 .hero__content{
     padding-top: 5rem;
     z-index: 2;
 }
 .hero__title{
-    font-size: 4rem;
+    font-size: 4.5rem;
     text-align: center;
     z-index: 2;
 }
+.hero__content h2{
+    text-align: center;
+    margin: 3rem 0;
+}
+
+
+.spanGo{
+    color:#ff0084 ;
+}
+.spanFund{
+    color:#00e1d9;
+}
+
+.spanYourself{
+    color:#843ea1;
+}
 .hero__content p{
-    font-size: 1.4rem;
-    margin-top: 1rem;
+    font-size: 1.3rem;
+    margin-top: 2rem;
     z-index: 2;
+    text-align: center;
 }
 .timer{
-    margin-top:2rem ;
+    margin-top:3rem ;
     padding: 2rem 0;
-    border: 2px solid var(--color-body);
+    border: 2px solid #fff;
     border-radius:10px/20px ;
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    align-items: center;
+    align-items: center; */
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.timer h4{
+    margin: .5rem;
+    text-align: center;
+}
+.timer__countdown{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 .timer h2{
     font-weight:400 ;
@@ -394,10 +412,7 @@ body{
     z-index: 1;
  }
 .hero__image .android{
-    position: absolute;
-    bottom: 0;
     width: 100%;
-    left: 0;
     z-index: 1;
     
 }
@@ -406,13 +421,19 @@ body{
         font-size: 1.6rem;
         margin-top: 2rem;
     }
+    .timer h4{
+        margin: 1rem;
+        text-align: center;
+    }
     .hero__image .android{
-        position: absolute;
+        /* position: absolute; */
         bottom: 0;
-        width: 80%;
-        left: 10%;
+        width: 100%;
+        
         z-index: 0;
     }
+
+   
 
 }  
 @media screen and (min-width:768px){
@@ -421,11 +442,30 @@ body{
         margin-top: 2rem;
     }
     .hero__image .android{
-        position: absolute;
-        bottom: 0;
-        width: 90%;
-        left: 5%;
+        /* position: absolute; */
+        /* bottom: 0; */
+        width: 100%;
+        /* left: 5%; */
         
+    }
+    .timer{
+        flex-direction: row;
+        align-items: center;
+        
+    }
+    .timer h4{
+        margin: 0;
+        text-align: center;
+        width: 40%;
+    }
+    .timer__countdown{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 60%;
+    }
+    .timer h3{
+        margin-bottom: 0;
     }
 
 }  
@@ -470,7 +510,7 @@ body{
     .timer{
         margin-top:5rem ;
         padding: 2rem 0;
-        border: 2px solid var(--color-body);
+        border: 3px solid #fff;
         border-radius:10px/20px ;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -480,8 +520,14 @@ body{
         width: 80%;
         margin:5rem auto;
     }
-    .timer h2{
-        font-weight:400 ;
+    .timer__countdown{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .timer h4{
+       width: 100%;
     }
     .timer span{
         color: var(--color-body);
@@ -530,7 +576,7 @@ body{
     .timer{
         margin-top:5rem ;
         padding: 2rem 0;
-        border: 2px solid var(--color-body);
+        border: 3px solid #fff;
         border-radius:10px/20px ;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -590,7 +636,7 @@ body{
     .timer{
         margin-top:5rem ;
         padding: 2rem 0;
-        border: 2px solid var(--color-body);
+        border: 3px solid #fff;
         border-radius:10px/20px ;
         display: grid;
         grid-template-columns: 1fr 1fr;
