@@ -135,7 +135,7 @@ body{
         width: 100vw;
         height: 100vh;
         padding: 4rem 4rem;
-        overflow: hidden;
+        overflow-x: hidden;
     }   
 }
 
@@ -144,6 +144,7 @@ body{
         width: 100vw;
         height: 100vh;
         padding: 2rem 3rem;
+        overflow: hidden;
     }  
 }
 .navbar{
@@ -342,6 +343,8 @@ body{
 .hero__content{
     padding-top: 5rem;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
 }
 .hero__title{
     font-size: 4.5rem;
@@ -353,7 +356,12 @@ body{
     margin: 3rem 0;
 }
 
-
+.hero__video{
+    width: 100%;
+    /* margin-top: 2rem; */
+    margin: 2rem auto 1rem auto;
+    height: 25vh;
+}
 .spanGo{
     color:#ff0084 ;
 }
@@ -421,6 +429,14 @@ body{
         font-size: 1.6rem;
         margin-top: 2rem;
     }
+    .hero__video{
+        width: 80%;
+        margin: 2.5rem auto 2rem auto;
+        /* margin: auto; */
+        height: 30vh;
+        /* margin-top: 2rem; */
+        
+    }
     .timer h4{
         margin: 1rem;
         text-align: center;
@@ -446,6 +462,15 @@ body{
         /* bottom: 0; */
         width: 100%;
         /* left: 5%; */
+        
+
+    }
+    .hero__video{
+        width: 80%;
+        margin: 2.5rem auto 2rem auto;
+        /* margin: auto; */
+        height: 25vh;
+        /* margin-top: 2rem; */
         
     }
     .timer{
@@ -506,9 +531,18 @@ body{
     .hero__content p{
         font-size: 1.7rem;
         padding: 0 1rem;
+        margin-top: 0;
+    }
+    .hero__video{
+        width: 50%;
+        margin: 1rem auto 0rem auto;
+        /* margin: auto; */
+        height: 15vh;
+        /* margin-top: 2rem; */
+        
     }
     .timer{
-        margin-top:5rem ;
+        /* margin-top:1rem ; */
         padding: 2rem 0;
         border: 3px solid #fff;
         border-radius:10px/20px ;
@@ -518,7 +552,7 @@ body{
         align-items: center;
         z-index: 2;
         width: 80%;
-        margin:5rem auto;
+        margin:1rem auto;
     }
     .timer__countdown{
         display: flex;
@@ -552,6 +586,16 @@ body{
         
     }
 }
+@media screen  and (min-width:1280px){
+    .hero__video{
+        width: 60%;
+        margin: 2rem auto 2rem auto;
+        /* margin: auto; */
+        height: 25vh;
+        /* margin-top: 2rem; */
+        
+    }
+}
 @media screen  and (min-width:1366px){
     
     .hero{
@@ -566,15 +610,23 @@ body{
     
     }
     .hero__title{
-        font-size: 5rem;
+        font-size: 4rem;
         text-align: center;
     }
     .hero__content p{
-        font-size: 1.7rem;
+        font-size: 1.3rem;
         padding: 0 1rem;
     }
+    .hero__video{
+        width: 50%;
+        margin: 2rem auto 0rem auto;
+        /* margin: auto; */
+        height: 25;
+        /* margin-top: 2rem; */
+        
+    }
     .timer{
-        margin-top:5rem ;
+        /* margin-top:5rem ; */
         padding: 2rem 0;
         border: 3px solid #fff;
         border-radius:10px/20px ;
@@ -584,7 +636,7 @@ body{
         align-items: center;
         z-index: 2;
         width: 80%;
-        margin:5rem auto;
+        margin:2rem auto;
     }
     .timer h2{
         font-weight:400 ;
@@ -626,12 +678,20 @@ body{
     
     }
     .hero__title{
-        font-size: 7rem;
+        font-size: 6.5rem;
         text-align: center;
     }
     .hero__content p{
-        font-size: 2.5rem;
+        font-size: 2rem;
         padding: 0 2rem;
+    }
+    .hero__video{
+        width: 50%;
+        margin: 2rem auto 0rem auto;
+        /* margin: auto; */
+        height: 25;
+        /* margin-top: 2rem; */
+        
     }
     .timer{
         margin-top:5rem ;
