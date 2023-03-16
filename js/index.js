@@ -5,7 +5,7 @@ document.querySelectorAll(".navbar__toggler").forEach(element =>{
 })
 
 
-const countDownDate=new Date("apr 30,2022 00:00:00").getTime();
+const countDownDate=new Date("apr 30,2026 00:00:00").getTime();
 console.log(countDownDate)
 
 const x = setInterval(function() {
